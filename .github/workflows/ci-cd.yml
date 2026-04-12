@@ -56,13 +56,12 @@ jobs:
           git config --global user.email "actions@github.com"
         # git add deployment.yaml
          # git commit -m "Update image to ${{ github.sha }}"
-           git add deployment.yaml
-
-           if [ -n "$(git status --porcelain)" ]; then
-           git commit -m "Update image to ${{ github.sha }}"
-           git push -f https://${GIT_TOKEN}@github.com/rslim087a/grade-api-gitops.git main
+          git add deployment.yaml
+          if [ -n "$(git status --porcelain)" ]; then
+          git commit -m "Update image to ${{ github.sha }}"
+          git push -f https://${GIT_TOKEN}@github.com/danzees/grade-api-gitops.git main
         else
-           echo "No changes to commit"
+          echo "No changes to commit"
         fi
           
           # Push
