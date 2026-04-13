@@ -57,6 +57,3 @@ jobs:
           
           # Push
           git push -f https://${GIT_TOKEN}@github.com/danzees/grade-api-gitops.git main
- github.sha }}"
-      git push origin main
-    fi
